@@ -56,8 +56,6 @@ const App = () => {
 	const [result, setResult] = useState();
 	const [loading, setLoading] = useState(false);
 
-	console.log('result', result);
-
 	const handleSubmit = () => {
 		setLoading(true);
 		makeCall({ search, setResult, setLoading });
@@ -103,8 +101,8 @@ const App = () => {
 			</div>
 			<div>
 				{loading && <p className='animate-pulse'>loading...</p>}
-				{result && !loading && (
-					<table className='w-full'>
+				{!loading && result && !!result.length && (
+					<table className='w-full text-center'>
 						<thead>
 							<tr>
 								<th className='border'>Name</th>
@@ -117,13 +115,12 @@ const App = () => {
 						</thead>
 						{result.map((item) => (
 							<tbody key={item.id}>
-								<tr>
-									<Details item={item} />
-								</tr>
+								<Details item={item} />
 							</tbody>
 						))}
 					</table>
 				)}
+				{!loading && result && 'no results found'}
 			</div>
 		</div>
 	);
