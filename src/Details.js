@@ -40,7 +40,7 @@ const Details = ({ item }) => {
 								: getReadMe(item.url, setReadme)
 						}
 					>
-						{readme ? 'hide README' : 'open README'}
+						{readme ? 'hide README' : 'show README'}
 					</button>
 				</td>
 			</tr>
