@@ -21,10 +21,11 @@ const App = () => {
 	};
 
 	return (
-		<div>
-			github access
-			<div>
+		<div className='p-8 space-y-4'>
+			<h1>Github repository search</h1>
+			<div className='space-x-4'>
 				<input
+					className='px-2 py-1 border border-gray-500 rounded-lg'
 					onChange={(e) => setSearch(e.target.value)}
 					onKeyDown={(e) => {
 						if (e.key === 'Enter' && search) handleSubmit(e);
@@ -35,8 +36,27 @@ const App = () => {
 				</button>
 			</div>
 			<div>
-				{result &&
-					result.map((item) => <Details key={item.id} item={item} />)}
+				{result && (
+					<table className='w-full border'>
+						<thead>
+							<tr className='border'>
+								<th>Name</th>
+								<th>Author</th>
+								<td>forks</td>
+								<td>watchers</td>
+								<td>stars</td>
+								<td>open issues</td>
+							</tr>
+						</thead>
+						{result.map((item) => (
+							<tbody>
+								<tr className='border'>
+									<Details key={item.id} item={item} />
+								</tr>
+							</tbody>
+						))}
+					</table>
+				)}
 			</div>
 		</div>
 	);
