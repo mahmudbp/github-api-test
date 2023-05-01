@@ -53,3 +53,5 @@ This is a test of the Github API. It is a simple app that allows searching of pu
 -   I would add filtering to the results but I was unable to think of appropriate filters for this project.
 
 -   I would display the readme on a new page and used react-router-dom to handle the routing, this would have allowed me to display the readme without breaking the structure of the page when it's displayed.
+
+-   The sorting function is slightly clunky, I would have liked to build the sorting into the table headers directly which would be more intuitive and better to use, also I would have liked to make shared sorting functions to use between similar sorts e.g. sorting numerically could have been done with the same function as well as sorting alphabetically with another single function.
