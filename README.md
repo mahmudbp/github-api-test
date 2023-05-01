@@ -27,13 +27,18 @@ This is a test of the Github API. It is a simple app that allows searching of pu
 ## Implementation thoughts
 
 -   Starting this project, I used create-react-app as it's a quick and easy starting point for a react project and I have experience with it.
-    I used TailwindCSS to handle the styling, this was a good choice as it's easy to use and has a lot of semantic classnames that are useful for a project like this.
+
+-   I used TailwindCSS to handle the styling, this was a good choice as it's easy to use and has a lot of semantic classnames that are useful for a project like this.
+
 -   My approach to getting the data was to use a basic fetch call, however I went with Octokit as the documentation suggested, this worked well as it made getting the readme much easier than doing it with fetch.
+
 -   I wanted to add filtering but as I wasn't sure what filters would be useful so instead I implemented sorting, this allows users to sort by any of the displayed fields.
 
 ## Struggles
 
--   My main struggle was with the readme, i wasn't sure how to display this initially without breaking the pages structure. I had to use a third party library to convert the markdown to html, I tried to decode it myself but this was quite inconsistent with different markdown formats.
+-   As this is my first timed project I struggled with time management, I spent too long on some areas initially which left me with less time on others towards the end.
+
+-   I had some difficulty with displaying the readme, I wasn't sure how to display this initially without breaking the pages structure. I had to use a third party library to convert the markdown to html, I tried to decode it myself but this was quite inconsistent with different markdown formats.
 
 -   I struggled with fetching the paginated data, I was able to get the first page of data but I wasn't sure how to get the rest of the data before running out of time.
 
@@ -46,3 +51,5 @@ This is a test of the Github API. It is a simple app that allows searching of pu
 -   I would use TypeScript as I have experience with it and it would have helped with type checking, im not very familiar with setting it up on a project so this would have required more time.
 
 -   I would add filtering to the results but I was unable to think of appropriate filters for this project.
+
+-   I would display the readme on a new page and used react-router-dom to handle the routing, this would have allowed me to display the readme without breaking the structure of the page when it's displayed.
