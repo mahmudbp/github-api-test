@@ -5,7 +5,7 @@ const Details = ({ item }) => {
 
 	return (
 		<>
-			<td>
+			<td className='border'>
 				<a
 					className='text-green-700 hover:underline hover:text-green-500 active:text-blue-900'
 					href={item.html_url}
@@ -15,11 +15,11 @@ const Details = ({ item }) => {
 					{item.name}
 				</a>
 			</td>
-			<td>{item.owner.login}</td>
-			<td>{item.forks}</td>
-			<td>{item.watchers}</td>
-			<td>{item.stargazers_count}</td>
-			<td>{item.open_issues_count}</td>
+			<td className='border'>{item.owner.login}</td>
+			<td className='border'>{item.forks}</td>
+			<td className='border'>{item.watchers}</td>
+			<td className='border'>{item.stargazers_count}</td>
+			<td className='border'>{item.open_issues_count}</td>
 			<td>open README</td>
 			{/* <button onClick={() => setExpanded(!expanded)}>
 				{expanded ? 'Less details' : 'More details'}
